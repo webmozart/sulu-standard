@@ -139,9 +139,6 @@ sulu_document_manager:
         snippet:
             class: Sulu\Bundle\SnippetBundle\Document\SnippetDocument
             phpcr_type: sulu:snippet
-        custom_urls:
-            class: Sulu\Component\CustomUrl\Document\CustomUrlDocument
-            phpcr_type: sulu:custom-url
 
 sulu_http_cache:
     handlers:
