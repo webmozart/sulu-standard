@@ -22,20 +22,87 @@ web:
     document_root: '/web'
     # The front-controller script to send non-static requests to.
     passthru: '/app.php'
+    # A list of static files (as regular expressions) that may be served.
+    whitelist:
+      # CSS and Javascript.
+      - \.css$
+      - \.js$
+      - \.json$
+      - \.hbs$
+
+      # image/* types.
+      - \.gif$
+      - \.jpe?g$
+      - \.png$
+      - \.tiff?$
+      - \.wbmp$
+      - \.ico$
+      - \.jng$
+      - \.bmp$
+      - \.svgz?$
+
+      # audio/* types.
+      - \.midi?$
+      - \.mpe?ga$
+      - \.mp2$
+      - \.mp3$
+      - \.m4a$
+      - \.ra$
+      - \.weba$
+
+      # video/* types.
+      - \.3gpp?$
+      - \.mp4$
+      - \.mpe?g$
+      - \.mpe$
+      - \.ogv$
+      - \.mov$
+      - \.webm$
+      - \.flv$
+      - \.mng$
+      - \.asx$
+      - \.asf$
+      - \.wmv$
+      - \.avi$
+
+      # application/ogg.
+      - \.ogx$
+
+      # application/x-shockwave-flash.
+      - \.swf$
+
+      # application/java-archive.
+      - \.jar$
+
+      # fonts types.
+      - \.ttf$
+      - \.eot$
+      - \.woff$
+      - \.otf$
+
+      # robots.txt.
+      - /robots\.txt$
 
 # The size of the persistent disk of the application (in MB).
 disk: 2048
 
 # The mounts that will be performed when the package is deployed.
 mounts:
-    '/var/cache': 'shared:files/cache'
-    '/var/data': 'shared:files/data'
-    '/var/logs': 'shared:files/logs'
+    '/app/cache': 'shared:files/cache'
+    '/app/data': 'shared:files/data'
+    '/app/logs': 'shared:files/logs'
+    '/web/uploads': 'shared:files/web-uploads'
+    '/uploads': 'shared:files/uploads'
 
 # The hooks that will be performed when the package is deployed.
 hooks:
     build: |
-      bin/console --env=prod sulu:build prod --no-debug
+      cp ./app/Resources/webspaces/sulu.io.xml.dist ./app/Resources/webspaces/sulu.io.xml
+      cp ./app/Resources/pages/overview.xml.dist ./app/Resources/pages/overview.xml
+      cp ./app/Resources/pages/default.xml.dist ./app/Resources/pages/default.xml
+      ./app/webconsole --env=prod assetic:dump
     deploy: |
-      bin/console --env=prod cache:clear
-      bin/webconsole --env=prod cache:clear
+      ./app/console --env=prod sulu:build dev --no-interaction
+      ./app/console --env=prod cache:clear
+      ./app/webconsole --env=prod cache:clear
+
