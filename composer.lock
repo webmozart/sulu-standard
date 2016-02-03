@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0310383b36883d8a0dc9455b0cfa0632",
-    "content-hash": "eb2f386c4293bf164dc64c1669ed1be1",
+    "hash": "98cebe91f7420baf2efb3b6646c05b72",
+    "content-hash": "209e991ceabde291849cf2e335504c1e",
     "packages": [
         {
             "name": "aferrandini/urlizer",
@@ -2864,16 +2864,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "dd8998b7c846f6909f4e7a5f67fabebfc412a4f7"
+                "reference": "e6f80ab77885151908d0ec743689ca700886e8b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/dd8998b7c846f6909f4e7a5f67fabebfc412a4f7",
-                "reference": "dd8998b7c846f6909f4e7a5f67fabebfc412a4f7",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/e6f80ab77885151908d0ec743689ca700886e8b0",
+                "reference": "e6f80ab77885151908d0ec743689ca700886e8b0",
                 "shasum": ""
             },
             "require": {
@@ -2908,7 +2908,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-01-06 13:31:20"
+            "time": "2016-01-29 16:19:52"
         },
         {
             "name": "php-ffmpeg/php-ffmpeg",
@@ -3677,16 +3677,16 @@
         },
         {
             "name": "sulu/document-manager",
-            "version": "dev-develop",
+            "version": "dev-feature/custom-urls",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sulu-io/sulu-document-manager.git",
-                "reference": "00c7fb2de024e2b7623c105f23194f198b5e559a"
+                "reference": "0fb2d165a32722d414361420399e64d78d99b07c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sulu-io/sulu-document-manager/zipball/00c7fb2de024e2b7623c105f23194f198b5e559a",
-                "reference": "00c7fb2de024e2b7623c105f23194f198b5e559a",
+                "url": "https://api.github.com/repos/sulu-io/sulu-document-manager/zipball/0fb2d165a32722d414361420399e64d78d99b07c",
+                "reference": "0fb2d165a32722d414361420399e64d78d99b07c",
                 "shasum": ""
             },
             "require": {
@@ -3720,20 +3720,20 @@
                 }
             ],
             "description": "Sulu Document Manager",
-            "time": "2015-12-18 13:41:41"
+            "time": "2016-02-01 06:49:56"
         },
         {
             "name": "sulu/sulu",
-            "version": "dev-develop",
+            "version": "dev-feature/custom-urls",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sulu-io/sulu.git",
-                "reference": "19aefd9512778cb5ab243aa72bcc835e267e21cf"
+                "reference": "923f65b50ddb58ead44f6d6f2868b63baf7bb91a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sulu-io/sulu/zipball/19aefd9512778cb5ab243aa72bcc835e267e21cf",
-                "reference": "19aefd9512778cb5ab243aa72bcc835e267e21cf",
+                "url": "https://api.github.com/repos/sulu-io/sulu/zipball/923f65b50ddb58ead44f6d6f2868b63baf7bb91a",
+                "reference": "923f65b50ddb58ead44f6d6f2868b63baf7bb91a",
                 "shasum": ""
             },
             "require": {
@@ -3753,7 +3753,7 @@
                 "pulse00/ffmpeg-bundle": "^0.5.2",
                 "sensio/framework-extra-bundle": "3.0.*",
                 "stof/doctrine-extensions-bundle": "1.1.*",
-                "sulu/document-manager": "dev-develop",
+                "sulu/document-manager": "dev-feature/custom-urls",
                 "symfony-cmf/routing-bundle": "1.2.*",
                 "symfony/swiftmailer-bundle": "~2.3",
                 "symfony/symfony": "~2.8",
@@ -3821,7 +3821,7 @@
                 "core",
                 "sulu"
             ],
-            "time": "2016-01-26 14:10:40"
+            "time": "2016-02-01 12:34:58"
         },
         {
             "name": "swiftmailer/swiftmailer",
