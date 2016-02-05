@@ -126,6 +126,7 @@ sulu_collaboration:
     connection_cache: doctrine_cache.providers.sulu_collaboration_connection
 
 sulu_document_manager:
+    debug: %kernel.debug%
     mapping:
         page:
             class: Sulu\Bundle\ContentBundle\Document\PageDocument
